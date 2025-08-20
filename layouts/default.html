@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="<%= @item[:lang] || "en" %>">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../custom.css">
+  <title><%= @item[:title] %></title>
+  <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+</head>
+<body>
+  <header>
+      <h3>Xinsheng Ooi</h3>
+        <% if @item[:lang] == 'en' %>
+          <a href="#about">About Me</a>&nbsp&nbsp
+          <a href="#contact">Contact Me</a>&nbsp&nbsp
+          <a href="zh-TW/index.html">中文</a>
+        <% elsif @item[:lang] == 'zh-TW' %>
+          <a href="#about">有關我</a>&nbsp&nbsp
+          <a href="#contact">聯絡我</a>&nbsp&nbsp
+          <a href="../index.html">English</a>&nbsp&nbsp
+          <a href="/zh/" aria-label="Switch to Simplified Chinese">简体</a>
+        <% elsif @item[:lang] == 'zh' %>
+          <a href="#about">有关我</a>&nbsp&nbsp
+          <a href="#contact">联络我</a>&nbsp&nbsp
+          <a href="../index.html">English</a>&nbsp&nbsp
+          <a href="/zh-TW/" aria-label="Switch to Traditional Chinese">繁體</a>
+        <% end %>
+        <i id="mode-toggle" class="fa-solid fa-moon" aria-hidden="true"></i>
+      </ul>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+      <small>
+        This website is powered by <a href="https://nanoc.ws" target="_blank" rel="noreferrer">Nanoc</a>, <a href="https://simplecss.org/" target="_blank" rel="noreferrer">Simple.css</a> and <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>.
+      </small>
+      <br />
+      <small>You can get the source code on <a href="https://github.com/okuramasafumi/okuramasafumi.com" target="_blank" rel="noreferrer">GitHub</a>.</small>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById('mode-toggle');
+      const body = document.body;
+      if (localStorage.getItem('colorMode') === 'dark') {
+        body.classList.add('dark-mode');
+      }
+
+      const toggle = document.getElementById('mode-toggle');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('fa-moon');
+        toggle.classList.toggle('fa-sun');
+      });
+
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('colorMode', 'dark');
+        } else {
+          localStorage.setItem('colorMode', 'light');
+        }
+      });
+    </script>
+</body>
+</html>
+
