@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="<%= @config[:base_path] %>/custom.css">
+  <link rel="stylesheet" href="<%= relative_path_to('/custom.css') %>">
   <title><%= @item[:title] %></title>
   <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
 </head>
@@ -20,12 +20,12 @@
           <a href="#about">有關我</a>&nbsp&nbsp
           <a href="#contact">聯絡我</a>&nbsp&nbsp
           <a href="../index.html">English</a>&nbsp&nbsp
-          <a href="/zh/" aria-label="Switch to Simplified Chinese">简体</a>
+          <a href="../zh/index.html" aria-label="Switch to Simplified Chinese">简体</a>
         <% elsif @item[:lang] == 'zh' %>
           <a href="#about">有关我</a>&nbsp&nbsp
           <a href="#contact">联络我</a>&nbsp&nbsp
           <a href="../index.html">English</a>&nbsp&nbsp
-          <a href="/zh-TW/" aria-label="Switch to Traditional Chinese">繁體</a>
+          <a href="../zh-TW/index.html" aria-label="Switch to Traditional Chinese">繁體</a>
         <% end %>
         <i id="mode-toggle" class="fa-solid fa-moon" aria-hidden="true"></i>
       </ul>
