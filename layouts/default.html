@@ -11,17 +11,19 @@
 </head>
 <body>
   <header>
-      <h3>Xinsheng Ooi</h3>
         <% if @item[:lang] == 'en' %>
+          <h3>Xinsheng Ooi</h3>
           <a href="#about">About Me</a>&nbsp&nbsp
           <a href="#contact">Contact Me</a>&nbsp&nbsp
           <a href="zh-TW/index.html">中文</a>
         <% elsif @item[:lang] == 'zh-TW' %>
+          <h3>黃新勝</h3>
           <a href="#about">有關我</a>&nbsp&nbsp
           <a href="#contact">聯絡我</a>&nbsp&nbsp
           <a href="../index.html">English</a>&nbsp&nbsp
           <a href="../zh/index.html" aria-label="Switch to Simplified Chinese">简体</a>
         <% elsif @item[:lang] == 'zh' %>
+          <h3>黄新胜</h3>
           <a href="#about">有关我</a>&nbsp&nbsp
           <a href="#contact">联络我</a>&nbsp&nbsp
           <a href="../index.html">English</a>&nbsp&nbsp
@@ -35,10 +37,10 @@
   </main>
   <footer>
       <small>
-        This website is powered by <a href="https://nanoc.ws" target="_blank" rel="noreferrer">Nanoc</a>, <a href="https://simplecss.org/" target="_blank" rel="noreferrer">Simple.css</a> and <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>.
+        This website is powered by <a href="https://nanoc.ws" target="_blank" rel="noreferrer">Nanoc</a>, <a href="https://simplecss.org/" target="_blank" rel="noreferrer">Simple.css</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noreferrer">GitHub Pages</a>.
       </small>
       <br />
-      <small>You can get the source code on <a href="https://github.com/okuramasafumi/okuramasafumi.com" target="_blank" rel="noreferrer">GitHub</a>.</small>
+      <small>You can get the source code on <a href="https://github.com/xs1128/me" target="_blank" rel="noreferrer">GitHub</a>.</small>
     </footer>
 
     <script>
