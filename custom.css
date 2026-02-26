@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --accent: #0d47a1;
+  --accent-hover: #1266e2;
+  --accent-text: var(--bg);
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+body.dark-mode {
+  color-scheme: dark;
+  --bg: #212121;
+  --accent-bg: #2b2b2b;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --accent: #ffb300;
+  --accent-hover: #ffe099;
+  --accent-text: var(--bg);
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
+
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--accent) !important;
+}
+
+header {
+  position: relative;
+  padding-right: 3rem;
+}
+
+#mode-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); /* Light mode glass */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1), 0 1.5px 4px rgba(0,0,0,0.05);
+  border: 3px solid var(--accent);
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 700;
+  backdrop-filter: saturate(180%) blur(15px);
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  -moz-backdrop-filter: saturate(180%) blur(15px);
+  -o-backdrop-filter: saturate(180%) blur(15px);
+  transition: background 0.2s, border-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+}
+
+body.dark-mode #mode-toggle {
+  background: rgba(33, 33, 33, 0.4);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Hover effect */
+#mode-toggle:hover {
+  background: rgba(255,255,255,0.45);
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
+}
+

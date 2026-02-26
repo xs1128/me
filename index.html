@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="custom.css">
+  <title>xs's site</title>
+  <meta name="generator" content="Nanoc 4.13.5">
+</head>
+<body>
+  <header>
+        
+          <h3>Xinsheng Ooi</h3>
+          <a href="#about">About Me</a>&nbsp&nbsp
+          <a href="#contact">Contact Me</a>&nbsp&nbsp
+          <a href="zh-TW/index.html">中文</a>
+        
+        <i id="mode-toggle" class="fa-solid fa-moon" aria-hidden="true"></i>
+      </ul>
+  </header>
+  <main>
+    <section>
+  <h2 id="about">about me as a:</h2>
+
+  <h3>programmer</h3>
+  <ul>
+    <li>
+        primary expertise is <strong>automation</strong> in <strong>Shell Script</strong>, <strong>Python</strong>, and <strong>Lua</strong>
+    </li>
+    <li>
+        enjoy creating open-source automation tools, please visit <a href="https://github.com/xs1128" target="_blank">GitHub</a> if you're interested.
+    </li>
+    <li>
+        <a href="https://neovim.io/" target="_blank">neovim</a> as my primary text editor and enjoy discussing about it
+    </li>
+    <li>
+        <a href="https://www.hammerspoon.org/" target="_blank">hammerspoon</a>,
+        <a href="https://karabiner-elements.pqrs.org/" target="_blank">karabiner</a> for macOS automation
+    </li>
+    <li>
+        please see my <a href="https://github.com/xs1128/dotfiles" target="_blank">dotfiles</a> (unorganized), if you'd like to know more about my development environment
+    </li>
+  </ul>
+
+  <h3>student</h3>
+  <ul>
+    <li>
+        <strong>Computer Science</strong> undergraduate in <a href="https://dcs.site.nthu.edu.tw/" target="_blank">NTHU CS</a>
+    </li>
+    <li>
+        in <strong>Hsinchu, Taiwan</strong>
+    </li>
+  </ul>
+
+  <h3>community volunteer</h3>
+  <ul>
+    <li>
+      <a href="https://www.facebook.com/mimac23" target="_blank">MIMAC</a> Malaysia 2023, 2024
+    </li> 
+  </ul> 
+
+  <h3>others</h3>
+  <ul>
+    <li>
+        color guard performer
+    </li>
+    <li>
+        native in Mandarin, English and fluent in Malay
+    </li>
+    <li>
+        enjoy drinking coffee and tea
+    </li>
+    <li>
+        constantly trying out new food
+    </li>
+    <li>
+        <a href="https://www.instagram.com/explore/search/keyword/?q=%23penangonebetter", target="_blank">#penangonebetter</a>
+    </li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>contact me</h2>
+    <p style="margin-bottom: 1rem;">email: hi@xsooi.com</a></p>
+  <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+    
+    <a href="https://www.linkedin.com/in/xinsheng-ooi-0ab9962b8/" aria-label="LinkedIn" target="_blank">
+      <i class="fab fa-linkedin" style="font-size:32px;"></i>
+    </a>
+    <a href="https://github.com/xs1128" aria-label="GitHub" target="_blank">
+      <i class="fab fa-github" style="font-size:32px;"></i>
+    </a>
+    <a href="https://www.instagram.com/xs_ooi1128" aria-label="Instagram" target="_blank">
+      <i class="fab fa-instagram" style="font-size:32px;"></i>
+    </a>
+    <a href="https://www.facebook.com/ooi.xinsheng/" aria-label="Facebook" target="_blank">
+      <i class="fab fa-facebook" style="font-size:32px;"></i>
+    </a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+      <small>
+        This website is powered by <a href="https://nanoc.ws" target="_blank" rel="noreferrer">Nanoc</a>, <a href="https://simplecss.org/" target="_blank" rel="noreferrer">Simple.css</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noreferrer">GitHub Pages</a>.
+      </small>
+      <br />
+      <small>You can get the source code on <a href="https://github.com/xs1128/me" target="_blank" rel="noreferrer">GitHub</a>.</small>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById('mode-toggle');
+      const body = document.body;
+      if (localStorage.getItem('colorMode') === 'dark') {
+        body.classList.add('dark-mode');
+      }
+
+      const toggle = document.getElementById('mode-toggle');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('fa-moon');
+        toggle.classList.toggle('fa-sun');
+      });
+
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('colorMode', 'dark');
+        } else {
+          localStorage.setItem('colorMode', 'light');
+        }
+      });
+    </script>
+</body>
+</html>
+
